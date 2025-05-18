@@ -1,0 +1,25 @@
+{
+    "name": "world-time-mcp-server",
+    "version": "1.0.0",
+    "description": "An MCP server that provides world time information",
+    "capabilities": {
+        "tools": true,
+        "resources": true
+    },
+    "tools": [
+        {
+            "name": "get_world_time",
+            "description": "Get the current time for any country or timezone",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "location": {
+                        "type": "string",
+                        "description": "The country, city or timezone to get the time for"
+                    }
+                },
+                "required": ["location"]
+            }
+        }
+    ]
+}
